@@ -1,6 +1,6 @@
 # CodeSync Roadmap
 
-Status: DRAFT v0.2, reconciled with ChatGPT's review (section 8). Items marked PENDING need owner approval before this is the approved plan. 2026-10-28. Planner: Claude. Reviewer/implementer: ChatGPT. Owner: Gautam.
+Status: DRAFT v0.2.1, reconciled with ChatGPT's review (section 8). Items marked PENDING need owner approval before this is the approved plan. 2026-10-28. Planner: Claude. Reviewer/implementer: ChatGPT. Owner: Gautam.
 
 How this file works
 - It holds the plan and task status only. Decisions and verified state live in PROJECT.md.
@@ -113,7 +113,7 @@ M1-D Client slice
 - Learn: React effect lifecycle with external resources (StrictMode double-invoke), the Yjs binding, the WebSocket auth handshake.
 
 M1-E Verify and log
-- Run PROJECT.md M1 criteria 1-9; write the milestone-log entry (what was verified, what was not, limitations). Answer the five explain-back questions (where implemented, how it works, why, failure cases, how tested).
+- Run PROJECT.md M1 criteria 1-10; write the milestone-log entry (what was verified, what was not, limitations). Answer the five explain-back questions (where implemented, how it works, why, failure cases, how tested).
 - Claude focused review #0 (auth and token handling only: collab auth hook, JWT config, api auth code, client token handling, M1-B output; about five files).
 - Optional M1.5: restricted deployment exercise per PROJECT.md section 6 (registration disabled, throwaway DB, no real content). Time-box it.
 
@@ -244,4 +244,5 @@ Contradictions found
 - Accepted: MF1 (owner cannot leave), MF2 (revocation is a public-deployment gate, with latency bound), MF3 (root npm test must run all suites), MF4 (reconcile Redis in PROJECT.md; D4 stays pending), SF2 (separate sync from persistence), SF5 (ObjectId membership ids).
 - Partially accepted: SF1 (CORS allow-list from env, not a Vite proxy); SF3 (root template for api + collab, plus a client-only template); SF4 (focused review after M1 added and M3 kept; M2 review also kept because M2 holds the authorization logic).
 - Rejected outright: none. Rejected parts: Vite proxy; dropping the M2 review.
+- v0.2.1: M1-E checklist now covers PROJECT.md criteria 1-10 (ChatGPT context-load finding; criterion 10 had been omitted).
 - Net scope change: small M1 additions (root test script, CORS config, env template split, M1 review); M2 adds id-type tests and owner rules; M2-4 promoted from should-have to public gate. No new infrastructure or features.
