@@ -1,0 +1,19 @@
+{
+  "name": "@codesync/collab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "scripts": {
+    "start": "node --env-file=../.env src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@hocuspocus/extension-database": "4.7.1",
+    "@hocuspocus/server": "4.7.1",
+    "jsonwebtoken": "9.0.3",
+    "mongodb": "7.7.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "codesync",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "workspaces": [
+    "client",
+    "api",
+    "collab"
+  ],
+  "scripts": {
+    "dev:client": "npm run dev --workspace=@codesync/client",
+    "build:client": "npm run build --workspace=@codesync/client",
+    "start:collab": "npm run start --workspace=@codesync/collab",
+    "test:collab": "npm run test --workspace=@codesync/collab",
+    "test": "npm run test:collab"
+  }
+}
